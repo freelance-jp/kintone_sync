@@ -156,7 +156,7 @@ module KintoneSync
     end
 
     def all
-      fetch_records('', fetch_all: true)
+      fetch_records('', true)
     end
 
     def container_type?(type)
@@ -312,7 +312,7 @@ module KintoneSync
 
     private
 
-    def fetch_records(base_query = '', fetch_all: false)
+    def fetch_records(base_query = '', fetch_all = false)
       # for more than 10,000 records.
       # https://developer.cybozu.io/hc/ja/articles/360030757312#use_id
 
