@@ -328,6 +328,7 @@ module KintoneSync
                 end
         records = @api.records.get(@app_id, query, []).dig('records')
         break unless records
+        break if records.count == 0
 
         res += records
 
